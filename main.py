@@ -3,7 +3,7 @@ from json import loads
 
 app = Flask(__name__)
 with open("sites.json") as file:
-  sites = loads(file)
+  sites = loads(file.read())
 
 @app.route('/')
 def index():
